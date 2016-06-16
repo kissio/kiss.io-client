@@ -1,12 +1,8 @@
 
-# socket.io-client
+# kiss.io-client `v1.5.0`
 
-[![Build Status](https://secure.travis-ci.org/socketio/socket.io-client.svg)](http://travis-ci.org/socketio/socket.io-client)
-[![Dependency Status](https://david-dm.org/socketio/socket.io-client.svg)](https://david-dm.org/socketio/socket.io-client)
-[![devDependency Status](https://david-dm.org/socketio/socket.io-client/dev-status.svg)](https://david-dm.org/socketio/socket.io-client#info=devDependencies)
-![NPM version](https://badge.fury.io/js/socket.io-client.svg)
-![Downloads](http://img.shields.io/npm/dm/socket.io-client.svg?style=flat)
-[![](http://slack.socket.io/badge.svg?)](http://slack.socket.io)
+[![Build Status](https://secure.travis-ci.org/kissio/kiss.io-client.svg)](http://travis-ci.org/kissio/kiss.io-client)
+[![Downloads](http://img.shields.io/npm/dm/kiss.io-client.svg?style=flat)](https://www.npmjs.com/package/kiss.io-client)
 
 ## How to use
 
@@ -22,14 +18,16 @@ Serve the file `kiss.io.js` found at the root of this repository.
 </script>
 ```
 
-Socket.IO is compatible with [browserify](http://browserify.org/).
+kiss.io-client [socket.io-client] is compatible with [browserify](http://browserify.org/).
 
 ### Node.JS (server-side usage)
 
-  Add `socket.io-client` to your `package.json` and then:
+  Add `kiss.io-client` to your `package.json` and then:
 
   ```js
-  var socket = require('socket.io-client')('http://localhost');
+  var io = require('kiss.io-client'),
+      socket = io('http://localhost');
+      
   socket.on('connect', function(){});
   socket.on('event', function(data){});
   socket.on('disconnect', function(){});
@@ -40,7 +38,7 @@ Socket.IO is compatible with [browserify](http://browserify.org/).
 ### IO(url:String, opts:Object):Socket
 
   Exposed as the `io` namespace in the standalone build, or the result
-  of calling `require('socket.io-client')`.
+  of calling `require('kiss.io-client')`.
 
   When called, it creates a new `Manager` for the given URL, and attempts
   to reuse an existing `Manager` for subsequent calls, unless the
@@ -52,12 +50,12 @@ Socket.IO is compatible with [browserify](http://browserify.org/).
   A `Socket` instance is returned for the namespace specified by the
   pathname in the URL, defaulting to `/`. For example, if the `url` is
   `http://localhost/users`, a transport connection will be established to
-  `http://localhost` and a Socket.IO connection will be established to
+  `http://localhost` and a **kiss.io** connection will be established to
   `/users`.
 
 ### IO#protocol
 
-  Socket.io protocol revision number this client works with.
+  **kiss.io** protocol revision number this client works with.
 
 ### IO#Socket
 
@@ -73,7 +71,7 @@ Socket.IO is compatible with [browserify](http://browserify.org/).
 
 ### Manager(url:String, opts:Object)
 
-  A `Manager` represents a connection to a given Socket.IO server. One or
+  A `Manager` represents a connection to a given **kiss.io** server. One or
   more `Socket` instances are associated with the manager. The manager
   can be accessed through the `io` property of each `Socket` instance.
 

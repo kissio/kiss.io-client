@@ -1,3 +1,8 @@
+1.5.0 / 2016-06-16
+==================
+
+  * Made socket.io compatible with kiss.io,
+  renamed it to kiss.io-client. [@ami3vr]
 
 1.4.5 / 2016-01-26
 ==================
