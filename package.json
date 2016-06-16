@@ -2,6 +2,9 @@
   "name": "kiss.io-client",
   "version": "1.5.0",
   "keywords": [
+    "kiss.io",
+    "kiss.io-client",
+    "kiss",
     "realtime",
     "framework",
     "websocket",
