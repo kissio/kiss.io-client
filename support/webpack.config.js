@@ -4,7 +4,7 @@ module.exports = {
   output: {
     library: 'io',
     libraryTarget: 'umd',
-    filename: 'socket.io.js'
+    filename: 'kiss.io.js'
   },
   externals: {
     global: glob()

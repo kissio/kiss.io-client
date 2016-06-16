@@ -46,7 +46,7 @@ gulp.task('lint', function () {
     '**/*.js',
     '!node_modules/**',
     '!coverage/**',
-    '!socket.io.js'
+    '!kiss.io.js'
   ])
     .pipe(eslint())
     .pipe(eslint.format())

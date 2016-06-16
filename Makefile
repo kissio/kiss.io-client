@@ -1,7 +1,7 @@
 
 REPORTER = dot
 
-build: socket.io.js
+build: kiss.io.js
 
 socket.io.js: lib/*.js package.json
 	@./node_modules/.bin/gulp

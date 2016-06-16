@@ -10,12 +10,10 @@
 
 ## How to use
 
-A standalone build of `socket.io-client` is exposed automatically by the
-socket.io server as `/socket.io/socket.io.js`. Alternatively you can
-serve the file `socket.io.js` found at the root of this repository.
+Serve the file `kiss.io.js` found at the root of this repository.
 
 ```html
-<script src="/socket.io/socket.io.js"></script>
+<script src="kiss.io.js"></script>
 <script>
   var socket = io('http://localhost');
   socket.on('connect', function(){});
