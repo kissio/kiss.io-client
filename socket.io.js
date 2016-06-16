@@ -5100,11 +5100,7 @@ Socket.prototype.packet = function(packet){
 
 Socket.prototype.onopen = function(){
   debug('transport is open - connecting');
-
-  // write connect packet if necessary
-  if ('/' != this.nsp) {
-    this.packet({ type: parser.CONNECT });
-  }
+  this.packet({ type: parser.CONNECT });
 };
 
 /**
